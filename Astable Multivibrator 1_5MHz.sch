@@ -1,0 +1,194 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 5197 4016
+encoding utf-8
+Sheet 1 1
+Title "Astable Multivibrator (1.5MHz)"
+Date "2021-10-19"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BC547 Q?
+U 1 1 616DC2F8
+P 1800 1550
+F 0 "Q?" H 1991 1596 50  0000 L CNN
+F 1 "BC547" H 1991 1505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2000 1475 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 1800 1550 50  0001 L CNN
+	1    1800 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q?
+U 1 1 616DC6AB
+P 3125 1550
+F 0 "Q?" H 3316 1596 50  0000 L CNN
+F 1 "BC547" H 3316 1505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3325 1475 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 3125 1550 50  0001 L CNN
+	1    3125 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 616DCB36
+P 2150 1550
+F 0 "C?" V 1898 1550 50  0000 C CNN
+F 1 "10p" V 1989 1550 50  0000 C CNN
+F 2 "" H 2188 1400 50  0001 C CNN
+F 3 "~" H 2150 1550 50  0001 C CNN
+	1    2150 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 616DCF67
+P 2775 1550
+F 0 "C?" V 2523 1550 50  0000 C CNN
+F 1 "10p" V 2614 1550 50  0000 C CNN
+F 2 "" H 2813 1400 50  0001 C CNN
+F 3 "~" H 2775 1550 50  0001 C CNN
+	1    2775 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 616DD40E
+P 1700 1150
+F 0 "R?" H 1770 1196 50  0000 L CNN
+F 1 "330" H 1770 1105 50  0000 L CNN
+F 2 "" V 1630 1150 50  0001 C CNN
+F 3 "~" H 1700 1150 50  0001 C CNN
+	1    1700 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 616DD5DE
+P 3225 1150
+F 0 "R?" H 3295 1196 50  0000 L CNN
+F 1 "330" H 3295 1105 50  0000 L CNN
+F 2 "" V 3155 1150 50  0001 C CNN
+F 3 "~" H 3225 1150 50  0001 C CNN
+	1    3225 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 616DD8DC
+P 2925 1150
+F 0 "R?" H 2995 1196 50  0000 L CNN
+F 1 "100k" H 2995 1105 50  0000 L CNN
+F 2 "" V 2855 1150 50  0001 C CNN
+F 3 "~" H 2925 1150 50  0001 C CNN
+	1    2925 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 616DDAF7
+P 2000 1150
+F 0 "R?" H 2070 1196 50  0000 L CNN
+F 1 "100k" H 2070 1105 50  0000 L CNN
+F 2 "" V 1930 1150 50  0001 C CNN
+F 3 "~" H 2000 1150 50  0001 C CNN
+	1    2000 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2525 1550 2250 1350
+Wire Wire Line
+	2250 1350 1700 1350
+Wire Wire Line
+	2400 1550 2575 1350
+Wire Wire Line
+	2575 1350 3225 1350
+Wire Wire Line
+	2300 1550 2400 1550
+Wire Wire Line
+	2525 1550 2625 1550
+Connection ~ 3225 1350
+Wire Wire Line
+	2925 1550 2925 1300
+Connection ~ 2925 1550
+Connection ~ 1700 1350
+Wire Wire Line
+	2000 1550 2000 1300
+Connection ~ 2000 1550
+Wire Wire Line
+	1700 1300 1700 1350
+Wire Wire Line
+	3225 1300 3225 1350
+$Comp
+L power:GND #PWR?
+U 1 1 61702D7E
+P 1700 1750
+F 0 "#PWR?" H 1700 1500 50  0001 C CNN
+F 1 "GND" H 1705 1577 50  0000 C CNN
+F 2 "" H 1700 1750 50  0001 C CNN
+F 3 "" H 1700 1750 50  0001 C CNN
+	1    1700 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6170338F
+P 3225 1750
+F 0 "#PWR?" H 3225 1500 50  0001 C CNN
+F 1 "GND" H 3230 1577 50  0000 C CNN
+F 2 "" H 3225 1750 50  0001 C CNN
+F 3 "" H 3225 1750 50  0001 C CNN
+	1    3225 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 61703ADC
+P 1700 1000
+F 0 "#PWR?" H 1700 850 50  0001 C CNN
+F 1 "VCC" H 1715 1173 50  0000 C CNN
+F 2 "" H 1700 1000 50  0001 C CNN
+F 3 "" H 1700 1000 50  0001 C CNN
+	1    1700 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 61704505
+P 2000 1000
+F 0 "#PWR?" H 2000 850 50  0001 C CNN
+F 1 "VCC" H 2015 1173 50  0000 C CNN
+F 2 "" H 2000 1000 50  0001 C CNN
+F 3 "" H 2000 1000 50  0001 C CNN
+	1    2000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 61704852
+P 2925 1000
+F 0 "#PWR?" H 2925 850 50  0001 C CNN
+F 1 "VCC" H 2940 1173 50  0000 C CNN
+F 2 "" H 2925 1000 50  0001 C CNN
+F 3 "" H 2925 1000 50  0001 C CNN
+	1    2925 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 61704C07
+P 3225 1000
+F 0 "#PWR?" H 3225 850 50  0001 C CNN
+F 1 "VCC" H 3240 1173 50  0000 C CNN
+F 2 "" H 3225 1000 50  0001 C CNN
+F 3 "" H 3225 1000 50  0001 C CNN
+	1    3225 1000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
